@@ -1,0 +1,62 @@
+.wrapper, .fieldWrapper, .yourCards {
+    display: flex;
+    justify-content: center;
+    width: auto;
+}
+.fieldWrapper {
+    margin-top: 25px;
+}
+.text {
+    border: solid gray 1px;
+    text-align: center;
+}
+button {
+    font-size: 20px;
+}
+.display {
+    display: inline;
+}
+.hidden {
+    display: none;
+}
+#numField {
+    padding: 15px;
+    width: 60px;
+}
+p {
+    font-size: 25px;
+}
+#playerScore {
+    margin-left: 5px;
+}
+.text {
+    width: 600px;
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    border: solid gray 1px;
+    text-align: center;
+}
+.card, .cards {
+    width: 85px;
+    height: 120px;
+    margin-top: 25px;
+    margin-right: 10px;
+    display: inline-flex;
+    justify-content: center;
+    border: solid gray 1px;
+    text-align: center;
+}
+.cards:hover {
+    border-color: blue;
+    width: 90px;
+    height: 140px;
+    text-align: center;
+}
+.cardsSelected {
+    border-color: green;
+    border-width: 2px;
+    width: 90px;
+    height: 140px;
+    text-align: center;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Video Poker</title>
+
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="pokerChallenge.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+
+<body>
+    <div class="wrapper">
+        <div class="mains">
+            <div class="text">
+                <p id="gameText">Your Cards:</p>
+            </div>
+            <div class="yourCards">
+                <div class="card">
+                    <p id="cardOne"></p>
+                </div>
+                <div class="card">
+                    <p id="cardTwo"></p>
+                </div>
+                <div class="card">
+                    <p id="cardThree"></p>
+                </div>
+                <div class="card">
+                    <p id="cardFour"></p>
+                </div>
+                <div class="card">
+                    <p id="cardFive"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="fieldWrapper">
+            <button type=button id="begin" onclick="dealCards()">Deal</button>
+        </div>
+        <div class="fieldWrapper">
+            <button type=button id="go" onclick="go()">Go</button>
+        </div>
+        <div class="wrapper">
+            <p>Player Score: </p>
+            <p id="playerScore"></p>
+        </div>
+        <script src=pokerChallenge.js></script>
+</body>
+
+</html>
