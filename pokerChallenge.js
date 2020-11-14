@@ -25,15 +25,21 @@ document.getElementById("playerScore").innerHTML = playerScore;
   var clubs = ["1♣️", "2♣️", "3♣️", "4♣️", "5♣️", "6♣️", "7♣️", "8♣️", "9♣️", "J♣️", "Q♣️", "K♣️", "A♣️"];
   var deck = hearts.concat(spades, diamonds, clubs);
 
+  var cardOne = document.getElementById("cardOne");
+  var cardTwo = document.getElementById("cardTwo");
+  var cardThree = document.getElementById("cardThree");
+  var cardFour = document.getElementById("cardFour");
+  var cardFive = document.getElementById("cardFive");
+
   // Used like so
   function dealCards() {
     shuffle(deck);
     console.log(deck);
-    document.getElementById("cardOne").innerHTML = deck[0];
-    document.getElementById("cardTwo").innerHTML = deck[1];
-    document.getElementById("cardThree").innerHTML = deck[2];
-    document.getElementById("cardFour").innerHTML = deck[3];
-    document.getElementById("cardFive").innerHTML = deck[4];
+    cardOne.innerHTML = deck[0];
+    cardTwo.innerHTML = deck[1];
+    cardThree.innerHTML = deck[2];
+    cardFour.innerHTML = deck[3];
+    cardFive.innerHTML = deck[4];
     document.getElementById("gameText").innerHTML = "Select any cards you want to keep. Unselected cards will be discarded for new cards. Press Go to continue.";
     document.getElementById("begin").className = "hidden";
     document.getElementById("go").className = "display";
@@ -52,14 +58,21 @@ document.getElementById("playerScore").innerHTML = playerScore;
 
   function go() {
     var hand = [];
-    var cardValue = document.getElementById("cardOne").value;
-    hand.push(cardValue);
+    hand.push(cardOne.innerHTML, cardTwo.innerHTML, cardThree.innerHTML, cardFour.innerHTML, cardFive.innerHTML);
     console.log(hand);
-    if (reDeal != reDeal) {
-      alert("pair");
+    var pair = false;
+    for (var i = 0; i <= 4; i++) {
+      if (hand[i] === hand[i]) {
+        pair = true;
+        alert("You got a pair!");
+        document.getElementById("playerScore").innerHTML = ++playerScore;
+        break;
+      }
+      if (pair === false) {
+        alert("No pair");
+      }
     }
   }
-  
 function dealCards1() {
     var playerNum = document.getElementById("numField").value;
     var comNum = Math.floor(Math.random() * 11);

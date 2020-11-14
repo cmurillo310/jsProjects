@@ -13,11 +13,11 @@
 button {
     font-size: 20px;
 }
-.display {
-    display: inline;
-}
 .hidden {
     display: none;
+}
+.display {
+    display: flex;
 }
 #numField {
     padding: 15px;
